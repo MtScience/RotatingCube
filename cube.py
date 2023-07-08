@@ -72,9 +72,11 @@ if __name__ == '__main__':
     try:
         sys.stdout.write('\x1b[2J')
         while True:
-            cube.update()
             sys.stdout.write('\x1b[H')
+
+            cube.update()
             cube.draw()
+            
             time.sleep(0.02)
     except KeyboardInterrupt:
         sys.exit()
